@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:test002/widgets/header.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
+// 状態管理を可能にするためのラップ
 class SyuSyu001screen extends ConsumerStatefulWidget {
   const SyuSyu001screen({super.key});
 
@@ -12,6 +13,7 @@ class SyuSyu001screen extends ConsumerStatefulWidget {
   _SyuSyu001screenState createState() => _SyuSyu001screenState();
 }
 
+// UIを定義　<SyuSyu001screen>は上で指定した状態管理機能をこちらでも適用させるためにある
 class _SyuSyu001screenState extends ConsumerState<SyuSyu001screen> {
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
   QRViewController? controller;
